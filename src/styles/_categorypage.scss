@@ -43,7 +43,7 @@
       margin: 2rem auto 9rem auto;
       &:nth-child(3) {
         flex-direction: row-reverse;
-        img {
+        .img-container {
           margin-right: 0;
           margin-left: 8rem;
           width: 50%;
@@ -58,6 +58,8 @@
       height: 20rem;
       background-color: $lightgray;
       border-radius: 10px;
+      display: flex;
+      justify-content: center;
       @media (min-width: 768px) {
         margin-bottom: 2rem;
       }
