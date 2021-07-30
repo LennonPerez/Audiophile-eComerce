@@ -13,7 +13,6 @@ const Main = () => {
   const history = useHistory();
 
   const selectProduct = (e) => {
-    console.log(e.target.parentElement.classList[0]);
     dispatch(selectProductAction(e.target.parentElement.classList[0]));
     history.push("/Products/Product");
   };
