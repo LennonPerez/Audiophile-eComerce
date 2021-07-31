@@ -14,7 +14,7 @@ const Main = () => {
 
   const selectProduct = (e) => {
     dispatch(selectProductAction(e.target.parentElement.classList[0]));
-    history.push("/Products/Product");
+    history.push(`/Products/${e.target.parentElement.classList[0]}`);
   };
 
   useEffect(() => {

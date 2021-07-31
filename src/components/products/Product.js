@@ -25,7 +25,7 @@ const Product = () => {
     setErrorMessage(false);
     setQuantity(1);
     dispatch(selectProductAction(e));
-    history.push("/Products/Product");
+    history.push(`/Products/${e}`);
     window.scrollTo(0, 0);
   };
 

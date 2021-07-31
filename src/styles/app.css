@@ -626,6 +626,12 @@
   margin-top: 0.5px;
 }
 
+@media (min-width: 1440px) {
+  .main-container {
+    margin-top: 0;
+  }
+}
+
 .main-container .hero {
   height: 31rem;
   width: 100%;
@@ -665,6 +671,7 @@
     background-size: 90rem 115%;
     background-position: center 100%;
     padding-bottom: 3rem;
+    border-top: 1px solid #f1f1f1;
   }
 }
 
@@ -2132,11 +2139,12 @@
 }
 
 .checkout .checkout-form .paymentbox .inputs {
-  width: 50%;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
   .checkout .checkout-form .paymentbox .inputs {
+    width: 50%;
     margin-top: 1rem;
   }
 }

@@ -10,7 +10,7 @@ const Category = ({ cat }) => {
 
   const goToProduct = () => {
     dispatch(selectProductAction(cat.slug));
-    history.push("/Products/Product");
+    history.push(`/Products/${cat.slug}`);
     window.scrollTo(0, 0);
   };
 

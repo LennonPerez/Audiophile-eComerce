@@ -28,21 +28,21 @@ const Footer = () => {
           home
         </Link>
         <Link
-          to="/Categories/Category"
+          to="/Categories/Headphonse"
           onClick={selectCategory}
           className="link"
         >
           headphones
         </Link>
         <Link
-          to="/Categories/Category"
+          to="/Categories/Speakers"
           onClick={selectCategory}
           className="link"
         >
           speakers
         </Link>
         <Link
-          to="/Categories/Category"
+          to="/Categories/Earphones"
           onClick={selectCategory}
           className="link"
         >

@@ -1,5 +1,8 @@
 .main-container {
   margin-top: 0.5px;
+  @media (min-width: 1440px) {
+    margin-top: 0;
+  }
   .hero {
     height: 31rem;
     width: 100%;
@@ -26,6 +29,7 @@
       background-size: 90rem 115%;
       background-position: center 100%;
       padding-bottom: 3rem;
+      border-top: 1px solid $lightgray;
     }
     p {
       letter-spacing: 10px;

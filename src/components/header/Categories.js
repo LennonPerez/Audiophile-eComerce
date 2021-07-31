@@ -24,7 +24,7 @@ const Burgermenu = ({ hidden, opencategories, setOpenCategories }) => {
           <div>
             <h3>headphones</h3>
             <Link
-              to="/Categories/Category"
+              to="/Categories/Headphones"
               onClick={selectCategory}
               className="link"
             >
@@ -37,7 +37,7 @@ const Burgermenu = ({ hidden, opencategories, setOpenCategories }) => {
           <div>
             <h3>speakers</h3>
             <Link
-              to="/Categories/Category"
+              to="/Categories/Speakers"
               onClick={selectCategory}
               className="link"
             >
@@ -50,7 +50,7 @@ const Burgermenu = ({ hidden, opencategories, setOpenCategories }) => {
           <div>
             <h3>earphones</h3>
             <Link
-              to="/Categories/Category"
+              to="/Categories/Earphones"
               onClick={selectCategory}
               className="link"
             >
