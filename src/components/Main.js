@@ -3,17 +3,13 @@ import { useHistory } from "react-router";
 import { useDispatch } from "react-redux";
 import Categories from "./header/Categories";
 import Gear from "./Gear";
-import {
-  selectProductAction,
-  clearStateAction,
-} from "../actions/ProductsAction";
+import { clearStateAction } from "../actions/ProductsAction";
 
 const Main = () => {
   const dispatch = useDispatch();
   const history = useHistory();
 
   const selectProduct = (e) => {
-    dispatch(selectProductAction(e.target.parentElement.classList[0]));
     history.push(`/Products/${e.target.parentElement.classList[0]}`);
   };
 

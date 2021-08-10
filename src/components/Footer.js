@@ -1,18 +1,10 @@
-import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
-import {
-  getAllProductsInvoice,
-  selectCategoryAction,
-} from "../actions/ProductsAction";
+import { selectCategoryAction } from "../actions/ProductsAction";
 
 const Footer = () => {
   const history = useHistory();
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getAllProductsInvoice());
-  }, []);
 
   const selectCategory = (e) => {
     dispatch(selectCategoryAction(e.target.textContent));
@@ -28,7 +20,7 @@ const Footer = () => {
           home
         </Link>
         <Link
-          to="/Categories/Headphonse"
+          to="/Categories/Headphones"
           onClick={selectCategory}
           className="link"
         >

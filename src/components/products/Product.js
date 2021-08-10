@@ -1,16 +1,12 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-import {
-  selectProductAction,
-  addProductToCartAction,
-} from "../../actions/ProductsAction";
+import { addProductToCartAction } from "../../actions/ProductsAction";
 
-const Product = () => {
+const Product = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
   const [errormessage, setErrorMessage] = useState(false);
   const [succesmessage, setSuccesMessage] = useState(false);
-  const product = useSelector((state) => state.selectedproduct[0]);
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const history = useHistory();
@@ -24,7 +20,6 @@ const Product = () => {
     setSuccesMessage(false);
     setErrorMessage(false);
     setQuantity(1);
-    dispatch(selectProductAction(e));
     history.push(`/Products/${e}`);
     window.scrollTo(0, 0);
   };

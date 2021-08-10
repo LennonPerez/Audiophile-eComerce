@@ -1,3 +1,13 @@
+@keyframes modal-animation {
+  0% {
+    top: 80%;
+    opacity: 0;
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+  }
+}
 .modal {
   background-color: white;
   width: 87%;
@@ -8,9 +18,14 @@
   z-index: 3;
   padding: 2rem;
   border-radius: 10px;
+  animation: modal-animation 0.8s ease forwards;
   @media (min-width: 768px) {
     width: 65%;
     padding: 2.5rem;
+  }
+  @media (min-width: 1024px) {
+    width: 50%;
+    padding: 2.8rem;
   }
   @media (min-width: 1440px) {
     width: 40%;

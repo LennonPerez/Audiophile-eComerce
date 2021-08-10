@@ -6,9 +6,8 @@ import { selectCategoryAction } from "../../actions/ProductsAction";
 const Burgermenu = ({ hidden, opencategories, setOpenCategories }) => {
   const dispatch = useDispatch();
 
-  const selectCategory = (e) => {
+  const selectCategory = () => {
     opencategories && setOpenCategories(false);
-    dispatch(selectCategoryAction(e.target.previousElementSibling.textContent));
     window.scrollTo(0, 0);
   };
 

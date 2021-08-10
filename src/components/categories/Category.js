@@ -1,16 +1,12 @@
-import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { selectProductAction } from "../../actions/ProductsAction";
 
 const Category = ({ cat }) => {
   const history = useHistory();
-  const dispatch = useDispatch();
 
-  const { image } = cat;
+  const { image, slug } = cat;
 
   const goToProduct = () => {
-    dispatch(selectProductAction(cat.slug));
-    history.push(`/Products/${cat.slug}`);
+    history.push(`/Products/${slug}`);
     window.scrollTo(0, 0);
   };
 

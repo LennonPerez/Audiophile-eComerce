@@ -126,6 +126,9 @@
       background-size: 57.5rem 57.5rem;
       background-position: center -20rem;
     }
+    @media (min-width: 1024px) {
+      width: 80%;
+    }
     @media (min-width: 1440px) {
       background-size: 57.5rem 57.5rem;
       background-position: -105% 20%;
@@ -229,6 +232,9 @@
       margin-bottom: 1.75rem;
       background-image: url(../assets/home/tablet/image-speaker-zx7.jpg);
     }
+    @media (min-width: 1024px) {
+      width: 80%;
+    }
     @media (min-width: 1440px) {
       background-image: url(../assets/home/desktop/image-speaker-zx7.jpg);
       width: 74%;
@@ -267,6 +273,9 @@
     @media (min-width: 768px) {
       display: flex;
       height: 18rem;
+    }
+    @media (min-width: 1024px) {
+      width: 80%;
     }
     @media (min-width: 1440px) {
       width: 74%;
@@ -339,6 +348,9 @@
   text-align: center;
   @media (min-width: 768px) {
     margin-bottom: 8rem;
+  }
+  @media (min-width: 1024px) {
+    width: 80%;
   }
   @media (min-width: 1440px) {
     display: flex;

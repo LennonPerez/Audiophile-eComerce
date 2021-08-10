@@ -1,4 +1,6 @@
 .back {
+  border: none;
+  background: none;
   text-decoration: none;
   font-size: 15px;
   color: gray;
@@ -14,6 +16,9 @@
   padding-top: 1rem;
   @media (min-width: 768px) {
     padding-top: 2rem;
+  }
+  @media (min-width: 1024px) {
+    width: 80%;
   }
   @media (min-width: 1440px) {
     padding-top: 4rem;

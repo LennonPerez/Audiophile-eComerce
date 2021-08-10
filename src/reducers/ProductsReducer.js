@@ -1,5 +1,4 @@
 import {
-  GET_ALL_PRODUCTS,
   SELECT_PRODUCT,
   SELECT_CATEGORY,
   CLEAR_STATE,
@@ -9,7 +8,6 @@ import {
 } from "../types/index";
 
 const initialState = {
-  products: [],
   selectedproduct: null,
   selectedcategory: null,
   cart: [],
@@ -17,24 +15,15 @@ const initialState = {
 
 export default function (state = initialState, action) {
   switch (action.type) {
-    case GET_ALL_PRODUCTS:
-      return {
-        ...state,
-        products: action.payload,
-      };
     case SELECT_PRODUCT:
       return {
         ...state,
-        selectedproduct: state.products.filter(
-          (product) => product.slug === action.payload
-        ),
+        selectedproduct: action.payload,
       };
     case SELECT_CATEGORY:
       return {
         ...state,
-        selectedcategory: state.products
-          .filter((product) => product.category === action.payload)
-          .reverse(),
+        selectedcategory: action.payload.reverse(),
       };
     case CLEAR_STATE:
       return {

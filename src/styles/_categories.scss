@@ -14,6 +14,9 @@
     border-radius: 0 0 7.5px 7.5px;
     padding: 2rem 6.5% 1.5rem 6.5%;
   }
+  @media (min-width: 1024px) {
+    padding: 0 10%;
+  }
   @media (min-width: 1440px) {
     padding: 0 13% 0 13%;
   }
@@ -132,6 +135,9 @@
   pointer-events: none;
   padding: 2rem 5% 1.5rem 5%;
   background: white;
+  @media (min-width: 1024px) {
+    padding: 2rem 10% 1.5rem 10%;
+  }
 }
 .show {
   opacity: 1;

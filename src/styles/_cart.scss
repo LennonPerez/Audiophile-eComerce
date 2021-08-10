@@ -21,6 +21,9 @@
     transform: none;
     padding: 1.7rem;
   }
+  @media (min-width: 1024px) {
+    right: 10%;
+  }
   @media (min-width: 1440px) {
     right: 13%;
     width: 30%;

@@ -1,5 +1,4 @@
 import {
-  GET_ALL_PRODUCTS,
   SELECT_PRODUCT,
   SELECT_CATEGORY,
   CLEAR_STATE,
@@ -9,21 +8,13 @@ import {
 } from "../types/index";
 import AxiosClient from "../config/axios";
 
-export function getAllProductsInvoice() {
+export function selectProductAction(name) {
   return async (dispatch) => {
     const products = await AxiosClient.get();
-    dispatch(getAllProducts(products.data.products));
-  };
-}
-
-const getAllProducts = (products) => ({
-  type: GET_ALL_PRODUCTS,
-  payload: products,
-});
-
-export function selectProductAction(product) {
-  return (dispatch) => {
-    dispatch(selectProduct(product));
+    const selected = products.data.products.filter(
+      (product) => product.slug === name
+    );
+    dispatch(selectProduct(selected[0]));
   };
 }
 
@@ -33,8 +24,12 @@ const selectProduct = (product) => ({
 });
 
 export function selectCategoryAction(category) {
-  return (dispatch) => {
-    dispatch(selectCategory(category));
+  return async (dispatch) => {
+    const categories = await AxiosClient.get();
+    const selected = categories.data.products.filter(
+      (product) => product.category === category
+    );
+    dispatch(selectCategory(selected));
   };
 }
 

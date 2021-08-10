@@ -6,6 +6,9 @@
     font-size: 28px;
     letter-spacing: 1px;
   }
+  @media (min-width: 1024px) {
+    width: 80%;
+  }
   @media (min-width: 1440px) {
     display: flex;
     width: 74%;
