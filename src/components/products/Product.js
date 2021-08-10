@@ -53,7 +53,7 @@ const Product = ({ product }) => {
         <img
           className="imgproduct"
           src={
-            innerWidth >= 768 ? (innerWidth >= 1440 ? desktop : tablet) : mobile
+            innerWidth >= 768 ? (innerWidth >= 1024 ? desktop : tablet) : mobile
           }
         />
         <div className="info">
@@ -151,7 +151,7 @@ const Product = ({ product }) => {
                   className="img"
                   src={
                     innerWidth >= 768
-                      ? innerWidth >= 1440
+                      ? innerWidth >= 1024
                         ? prod.image.desktop
                         : prod.image.tablet
                       : prod.image.mobile

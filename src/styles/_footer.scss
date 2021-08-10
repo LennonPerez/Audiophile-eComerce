@@ -118,7 +118,6 @@
       text-decoration: none;
       width: 1.75rem;
       height: 100%;
-      background-image: url(../assets/shared/desktop/icon-facebook.svg);
       background-position: center center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -131,13 +130,16 @@
       &:hover {
         width: 2.2rem;
         height: 120%;
+        .svglogo {
+          fill: $darkorange;
+          transition: fill 0.5s ease;
+        }
         @media (min-width: 768px) {
           height: 70%;
           width: 1.75rem;
         }
       }
       &:nth-child(2) {
-        background-image: url(../assets/shared/desktop/icon-twitter.svg);
         margin: 0 1rem;
         @media (min-width: 768px) {
           height: 50%;
@@ -147,9 +149,6 @@
             width: 1.75rem;
           }
         }
-      }
-      &:last-child {
-        background-image: url(../assets/shared/desktop/icon-instagram.svg);
       }
     }
   }

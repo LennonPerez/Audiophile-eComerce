@@ -12,17 +12,12 @@ const ProductPage = () => {
   const dispatch = useDispatch();
   const { name } = useParams();
 
-  const scrollUp = () => {
-    window.scrollTo(0, 0);
-  };
-
   useEffect(() => {
     dispatch(selectProductAction(name));
-    scrollUp();
+    window.scrollTo(0, 0);
   }, [name]);
 
   const goBack = () => {
-    scrollUp();
     history.goBack();
   };
 
