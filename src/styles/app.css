@@ -220,6 +220,7 @@
 @media (min-width: 1024px) {
   .cart {
     right: 10%;
+    width: 35%;
   }
 }
 
